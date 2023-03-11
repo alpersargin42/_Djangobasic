@@ -14,6 +14,11 @@ def index(request):
         'categories': kategoriler,
         'courses':kurslar,
     })
+def about(request):
+    return render(request,'pages/about.html')
+
+def contact(request):
+    return render(request,'pages/contact.html')
 
 def search(request):
     if "q" in request.GET and request.GET["q"] !="":
